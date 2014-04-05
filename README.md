@@ -1,12 +1,16 @@
-# vuejs.org
+This is a fork of [vuejs.org](https://github.com/vuejs/vuejs.org) to attempt to investigate/optimize KnockoutJS performance issues.
 
-This site is built with [hexo](http://zespia.tw/hexo/). Site content is written in Markdown format located in `source`. Pull requests welcome!
+Changes  
+* Use rateLimit to throttle evaluation of filteredItems, which drives the loop in the UI.
 
-## Developing
+Test here:  
+http://winstonfassett.github.io/vuejs-perf/perf/todomvc-benchmark/index.html
 
-Start a dev server at `localhost:4000`:
+Specify an "r" value in the querystring for repetitions:  
+http://winstonfassett.github.io/vuejs-perf/perf/todomvc-benchmark/index.html?r=10
 
-```
-& npm install -g hexo
-& hexo server
-```
+See the patched Knockout test app here:  
+http://winstonfassett.github.io/vuejs-perf/perf/todomvc-benchmark/todomvc/knockoutjs/index.html
+
+Original test can be run here:  
+http://vuejs.org/perf/todomvc-benchmark/
