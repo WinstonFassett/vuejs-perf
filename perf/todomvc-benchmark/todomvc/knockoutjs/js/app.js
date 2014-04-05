@@ -87,7 +87,8 @@
 			default:
 				return this.todos();
 			}
-		}.bind(this));
+		}.bind(this))
+			.extend({ rateLimit: { timeout: 37, method: "notifyWhenChangesStop" } });
 
 		// add a new todo, when enter key is pressed
 		this.add = function () {
